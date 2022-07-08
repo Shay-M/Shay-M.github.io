@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Generic - Phantom by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+
+
+        <div id="main">
+            <div class="inner">
+                <h1>Deep Learning Project - Classification of Histopathology Images</h1>
+
+                <!-- <embed src="pdf/class13.pdf" width="1200" height="450" type="application/pdf"> -->
+
+                <iframe src="pdf/class13.pdf#toolbar=0" width="100%" height="400px">
+                </iframe>
+
+                <p>
+
+
+                    <b>The purpose of the project:</b> is to classify images of histopathology by using in-depth
+                    learning
+                    methods learned during the course.
+                    The system can classify images of tissue samples into 8 different categories with an accuracy of
+                    97%.
+                    <hr>
+                </p>
+
+                <p>
+                    <b>First Step Step Classification Training:</b>
+                    At this point we have downloaded the classified layers of the
+                    pre-trained model because the weights are aimed at classifying images that are different from our
+                    training images.
+                    For example, the VGG models practiced on ImageNet images that include images of various animals and
+                    objects. The images in the database do not show the histopathological images that our project needs
+                    to classify, so the upper layers in the pre-trained model do not have the ability to classify these
+                    images.
+                    We froze the lower layers of the model so as not to change their weight values ​​while training the
+                    upper layers.
+                    We added our top layers to the model and continued the training process when in practice at this
+                    point only the weights of the top layers change. The weights of the lower layers whose function is
+                    to extract the properties of the image do not change.
+                    <hr>
+                    <b>Step Two Fine-tuning the model weights:</b>
+                    In the
+                    second step we loosened the bottom layers and continued to train the entire model to further improve
+                    the accuracy percentages we received.
+                    Here it is important to choose the optimizer and its settings because the model is already close to
+                    the optimum and should proceed gently.
+                    In our model we chose to use an SGD optimizer with a relatively high learning constant that brought
+                    us to a 97% prediction accuracy.
+                    <hr>
+                </p>
+
+                <!-- <div class="row-container">
+                    <div class="first-row">
+                    </div>
+                    <iframe src="project roundabout/rou.html" class="second-row"></iframe>
+                </div> -->
+
+                <a
+                    href="https://github.com/Shay-M/Python-projects-and-exercises/blob/master/Deep%20learning/Project/Deep_Learning_Project_Aaron_and_Shay.ipynb">
+                    <img src="images/git.png" alt="Deep Learning Project" style="width:60px;height:60px;">
+                </a>
+
+
+            </div>
+
+
+
+
+</html>

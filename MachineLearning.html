@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Generic - Phantom by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+
+
+        <div id="main">
+            <div class="inner">
+                <h1>Machine learning Projects</h1>
+
+                <p>
+                    <b>Assignment 1:</b> is to classify images of histopathology by using in-depth
+                    learning
+                    methods learned during the course.
+                    The system can classify images of tissue samples into 8 different categories with an accuracy of
+                    97%.
+                </p>
+                <a
+                    href="https://github.com/Shay-M/Python-projects-and-exercises/blob/master/Machine%20learning/Assignment/Assignment1.ipynb">
+                    <img src="images/git.png" alt="Assignment 1" style="width:60px;height:60px;">
+                </a>
+                <hr>
+                <p>
+                    <b>Assignment 2:</b>
+                    At this point we have downloaded the classified layers of the
+                    pre-trained model because the weights are aimed at classifying images that are different from our
+                    training images.
+                    For example, the VGG models practiced on ImageNet images that include images of various animals and
+                    objects. The images in the database do not show the histopathological images that our project needs
+                    to classify, so the upper layers in the pre-trained model do not have the ability to classify these
+                    images.
+                    We froze the lower layers of the model so as not to change their weight values ​​while training the
+                    upper layers.
+                    We added our top layers to the model and continued the training process when in practice at this
+                    point only the weights of the top layers change. The weights of the lower layers whose function is
+                    to extract the properties of the image do not change.
+
+                </p>
+
+                <a
+                    href="https://github.com/Shay-M/Python-projects-and-exercises/blob/master/Machine%20learning/Assignment/Assignment2.ipynb">
+                    <img src="images/git.png" alt="Assignment 2" style="width:60px;height:60px;">
+                </a>
+                <hr>
+                <p>
+                    <b>Assignment 3:</b>
+                    In the
+                    second step we loosened the bottom layers and continued to train the entire model to further improve
+                    the accuracy percentages we received.
+                    Here it is important to choose the optimizer and its settings because the model is already close to
+                    the optimum and should proceed gently.
+                    In our model we chose to use an SGD optimizer with a relatively high learning constant that brought
+                    us to a 97% prediction accuracy.
+                    <hr>
+                </p>
+                <a
+                    href="https://github.com/Shay-M/Python-projects-and-exercises/blob/master/Machine%20learning/Assignment/competitive_assignment.ipynb">
+                    <img src="images/git.png" alt="Assignment 3" style="width:60px;height:60px;">
+                </a>
+
+
+            </div>
+
+
+
+
+</html>

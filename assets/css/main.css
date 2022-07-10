@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+
 }
 
 ol, ul {
@@ -99,7 +100,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #ffffff;
+		background: #dcdcdc;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -151,7 +152,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #f2849e !important;
+			color: #e07991 !important;
 		}
 
 	strong, b {
@@ -163,7 +164,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
 	h1 {
@@ -208,20 +209,26 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 1.2em;
-		text-shadow: 2px 2px #000000;
+		font-size: 1.8em;
+		font-kerning: auto;
+		letter-spacing: 0.1em;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: black;
+		text-shadow: 2px 2px #000000cb;
 	}
 
 	.content {
-		text-shadow: 1px 1px #000000;
-		font-weight: 600;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: black;
+		font-weight: 900;
 		font-style: oblique;
-		font-size: 1em;
+		font-size: 1.3em;
 
 	}
 
+
 	h3 {
-		font-size: 1em;
+		font-size: 2em;
 	}
 
 	h4 {
@@ -246,12 +253,16 @@ input, select, textarea {
 
 	@media screen and (max-width: 736px) {
 
+		p {
+			font-size: 0.8em;
+		}
+
 		h2 {
-			font-size: 1em;
+			font-size: 1.5em;
 		}
 
 		h3 {
-			font-size: 0.8em;
+			font-size: 0.6em;
 		}
 
 	}
@@ -1801,12 +1812,14 @@ input, select, textarea {
 	}
 
 	header p {
-		margin-top: -1em;
+		font-size: 2em;
+		margin-top: -2em;
 	}
 
 	@media screen and (max-width: 736px) {
 
 		header p {
+			font-size: 1em;
 			margin-top: 0;
 		}
 
@@ -2337,7 +2350,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 100%;
 		}
 
 			.image.left img, .image.right img {
@@ -2579,10 +2592,20 @@ input, select, textarea {
 /* Tiles */
 
 	.tiles {
-		display: -moz-flex;
+		/* display: grid; */
+		/* grid-gap: 15px; */
+		/* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		-moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2; */
+		
+		flex-flow: row wrap;
+		 display: -moz-flex;
 		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
+		display: -ms-flex; 
+		
+
+		/* display: flex;  */
 		-moz-flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
@@ -2597,7 +2620,7 @@ input, select, textarea {
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
-			width: calc(23.33333% - 2.5em);
+			width: calc(33.33333% - 2.5em);
 			margin: 2.5em 0 0 2.5em;
 		}
 
@@ -2720,16 +2743,16 @@ input, select, textarea {
 						margin-bottom: 0;
 					}
 
-			.tiles article.style1 > .image:before {
-				background-color: #f2849e;
+			.tiles article.styleJava > .image:before {
+				background-color: #7bd0a1;
 			}
 
-			.tiles article.style2 > .image:before {
+			.tiles article.stylePython > .image:before {
 				background-color: #7ecaf6;
 			}
 
-			.tiles article.style3 > .image:before {
-				background-color: #7bd0c1;
+			.tiles article.styleAs > .image:before {
+				background-color: #f2849e;
 			}
 
 			.tiles article.style4 > .image:before {
@@ -2780,17 +2803,20 @@ input, select, textarea {
 		body.is-touch .tiles article .content {
 			max-height: 15em;
 			opacity: 1;
+			
 		}
 
 		@media screen and (max-width: 1280px) {
 
 			.tiles {
-				margin: -1.25em 0 0 -1.25em;
+				/* margin: -1.25em -1.25em 0 -1.25em; */
+				margin: 2em auto 2em;
 			}
 
 				.tiles article {
 					width: calc(33.33333% - 1.25em);
-					margin: 1.25em 0 0 1.25em;
+					/* margin: 1.25em 0 0 1.25em; */
+					margin: 1em auto 1em;
 				}
 
 		}
@@ -2798,12 +2824,15 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			.tiles {
-				margin: -2.5em 0 0 -2.5em;
+				/* margin: -2.5em -2.5em 0 -2.5em; */
+				margin: 2em auto 2em;
+				
 			}
 
 				.tiles article {
 					width: calc(50% - 2.5em);
-					margin: 2.5em 0 0 2.5em;
+					/* margin: 2.5em 2.5em 0 2.5em; */
+					margin: 2em auto 2em;
 				}
 
 		}
@@ -2811,12 +2840,14 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.tiles {
-				margin: -1.25em 0 0 -1.25em;
+				/* margin: -1.25em -1.25em 0 -1.25em; */
+				margin: 2em auto 2em;
 			}
 
 				.tiles article {
 					width: calc(50% - 1.25em);
-					margin: 1.25em 0 0 1.25em;
+					/* margin: 1.25em 1.25em 0 1.25em; */
+					margin: 2em auto 2em;
 				}
 
 					.tiles article:hover > .image {

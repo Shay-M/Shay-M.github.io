@@ -7,14 +7,18 @@
 // }
 
 // https://api.countapi.xyz/get/mysite.com/test
-// function websiteVisits(response) {
-//     //   document.getElementById('visits').innerText = response.value;
-//     document.getSelection('#visits').textContent = response.value;
-//     console.log('>> ' + response.value);
-//   }
 
-import countapi from 'countapi-js';
+function websiteVisits(response) {
+  fetch(
+    'https://api.countapi.xyz/hit/	shay-m.github.io/30852cd2-8c1e-480a-a258-2d96feb4672a'
+  )
+    .then((response) => response.json())
+    .then((response) => console.log('>> ' + response.value));
+  document.getSelection('#visits').textContent = response.value;
+}
+
+/* import countapi from 'countapi-js';
 
 countapi.visits().then((result) => {
   console.log(result.value);
-});
+}); */

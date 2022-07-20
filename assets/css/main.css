@@ -1904,13 +1904,13 @@ input, select, textarea {
 		}
 
 	ul {
+		
 		list-style: disc;
-		margin: 0 0 2em 0;
-		padding-left: 1em;
+		padding-top: 2em;
 	}
 
 		ul li {
-			padding-left: 0.5em;
+			display:inline;
 		}
 
 		ul.alt {
